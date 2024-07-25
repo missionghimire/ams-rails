@@ -10,5 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_25_162115) do
+  create_table "artists", force: :cascade do |t|
+    t.string "name"
+    t.date "dob"
+    t.string "gender"
+    t.string "address"
+    t.string "first_release_year"
+    t.integer "no_of_albums_released"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "musics", force: :cascade do |t|
+    t.integer "artist_id"
+    t.string "title"
+    t.string "album_name"
+    t.string "genre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password_digest"
+    t.string "phone"
+    t.date "dob"
+    t.string "gender"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

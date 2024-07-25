@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   post "artist/create" => "artists#create"
   put "artist/update" => "artists#update"
+  delete "artist/delete/"=> "artists#destroy"
 
   post "music/create" => "musics#create"
+  put "music/update" => "musics#update"
+  delete "music/delete/"=> "musics#destroy"
+
 
 end

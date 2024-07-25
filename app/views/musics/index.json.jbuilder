@@ -1,9 +1,10 @@
 json.result 'success'
 json.data do
-  json.array! @users do |user|
-    json.id user.id
-    json.name "#{user.first_name} #{user.last_name}"
-    json.email user.email
+  json.array! @musics do |music|
+    json.artist_id music.artist_id
+    json.title music.title
+    json.album_name music.album_name
+    json.genre music.genre
   end
 end
 json.meta do
