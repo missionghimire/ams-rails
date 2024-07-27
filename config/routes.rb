@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   put "music/update" => "musics#update"
   delete "music/delete/"=> "musics#destroy"
 
+  get "/" => "dashboards#index"
+
 
 end
