@@ -11,7 +11,7 @@ class MusicCreateForm
 
   def initialize(params = {})
     super()
-    @artist_id = params[:artist_id]
+    @artist_id = params[:id]
     @title = params[:title]
     @album_name = params[:album_name]
     @genre = params[:genre]

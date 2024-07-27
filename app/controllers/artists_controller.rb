@@ -32,16 +32,15 @@ class ArtistsController < ApplicationController
     @artist.gender = form.gender unless form.gender.nil?
     @artist.address = form.address unless form.address.nil?
     @artist.first_release_year = form.first_release_year unless form.first_release_year.nil?
-    @artist.number_of_albums = form.number_of_albums unless form.number_of_albums.nil?
+    @artist.no_of_albums_released = form.no_of_albums_released unless form.no_of_albums_released.nil?
 
     return error_validation(@artist.errors) if @artist.invalid?
     @artist.save!
   end
 
-  def destroy
+  def delete
     @artist = Artist.find(params[:id])
     @artist.destroy
-    render :destroy, status: :no_content
   end
 
   def show_songs

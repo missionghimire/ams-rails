@@ -1,5 +1,5 @@
 json.result 'success'
 json.updated true
 json.data do
-  json.partial @artists
+  json.partial @artist
 end

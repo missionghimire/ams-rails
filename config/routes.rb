@@ -8,13 +8,13 @@ Rails.application.routes.draw do
 
   post "artist/create" => "artists#create"
   get "artist/index" => "artists#index"
-  put "artist/update" => "artists#update"
-  delete "artist/delete/"=> "artists#destroy"
-  get "show-music/:id" => "artists#show_songs"
+  put "artist/update/:id" => "artists#update"
+  delete "artist/delete/:id"=> "artists#delete"
 
-  post "music/create" => "musics#create"
-  put "music/update" => "musics#update"
-  delete "music/delete/"=> "musics#destroy"
+  get "show-music/:id" => "artists#show_songs"
+  post "music/:id/create" => "musics#create"
+  # put "music/:id/update" => "musics#update"
+  delete "music/delete/:id"=> "musics#delete"
 
   get "/" => "dashboards#index"
 
