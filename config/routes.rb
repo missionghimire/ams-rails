@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   post "register" => "users#create"
 
   get "index" => "users#index"
-  put "user/update/" => "users#update"
-  delete "user/delete/" => "users#destroy"
+  put "user/update/:id" => "users#update"
+  delete "user/delete/:id" => "users#destroy"
 
   post "artist/create" => "artists#create"
   put "artist/update" => "artists#update"
