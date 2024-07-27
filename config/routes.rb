@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   delete "user/delete/:id" => "users#destroy"
 
   post "artist/create" => "artists#create"
+  get "artist/index" => "artists#index"
   put "artist/update" => "artists#update"
   delete "artist/delete/"=> "artists#destroy"
+  get "show-music/:id" => "artists#show_songs"
 
   post "music/create" => "musics#create"
   put "music/update" => "musics#update"
