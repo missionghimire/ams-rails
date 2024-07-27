@@ -1,5 +1,4 @@
 class Artist < ApplicationRecord
-
   scope :search, -> (query) {
     return all if query.blank?
 

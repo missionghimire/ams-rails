@@ -1,5 +1,5 @@
 class Music < ApplicationRecord
-  has_secure_password
+
 
   scope :search, -> (query){
     return all if query.blink?
@@ -8,4 +8,3 @@ class Music < ApplicationRecord
           "%#{query.downcase}%", "%#{query.downcase}%", "%#{query.downcase}%")
   }
 end
-db-artist-music

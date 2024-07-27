@@ -17,7 +17,7 @@ class ArtistsController < ApplicationController
     @artist.gender = form.gender
     @artist.address = form.address
     @artist.first_release_year = form.first_release_year
-    @artist.number_of_albums = form.number_of_albums
+    @artist.no_of_albums_released = form.no_of_albums_released
 
     return error_validation(@artist.errors) if @artist.invalid?
     @artist.save!
