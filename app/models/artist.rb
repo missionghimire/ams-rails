@@ -1,4 +1,5 @@
 class Artist < ApplicationRecord
+  has_many :music
   scope :search, -> (query) {
     return all if query.blank?
 

@@ -1,5 +1,5 @@
 class Music < ApplicationRecord
-
+  belongs_to :artist
 
   scope :search, -> (query){
     return all if query.blink?

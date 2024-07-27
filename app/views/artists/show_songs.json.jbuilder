@@ -1,4 +1,4 @@
 json.result 'success'
 json.data do
-  json.partial @artists
+  json.partial @songs
 end

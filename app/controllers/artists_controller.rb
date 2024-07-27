@@ -4,7 +4,6 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.page(params[:page]).per(10)
-    render :index
   end
 
   def create
@@ -21,7 +20,6 @@ class ArtistsController < ApplicationController
 
     return error_validation(@artist.errors) if @artist.invalid?
     @artist.save!
-    render :create, status: :created
   end
 
   def update
@@ -38,7 +36,6 @@ class ArtistsController < ApplicationController
 
     return error_validation(@artist.errors) if @artist.invalid?
     @artist.save!
-    render :update, status: :ok
   end
 
   def destroy
@@ -49,8 +46,7 @@ class ArtistsController < ApplicationController
 
   def show_songs
     @artist = Artist.find(params[:id])
-    @songs = @artist.songs
-    render :show_songs
+    @songs = @artist.music
   end
 end
 
