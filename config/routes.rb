@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "show-music/:id" => "artists#show_songs"
   post "music/:id/create" => "musics#create"
-  # put "music/:id/update" => "musics#update"
+  put "music/update/:id" => "musics#update"
   delete "music/delete/:id"=> "musics#delete"
 
   get "/" => "dashboards#index"
